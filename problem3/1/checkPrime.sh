@@ -5,9 +5,9 @@ read input
 #check for prime starts
 flag=0
 i=2
-halfInput=$((input/2))
+cutInput=$( echo "sqrt($input)" | bc )
 
-while [ $(echo "$i <= $halfInput" | bc ) -eq 1 ]
+while [ $(echo "$i <= $cutInput" | bc ) -eq 1 ]
 do
 	#echo "$i"
 	if [ $(echo "$input % $i" | bc ) -eq 0 ]
